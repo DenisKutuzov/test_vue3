@@ -1,33 +1,30 @@
 <template>
-    <div>
-        <!--    v-loading-custom="isLoading"-->
-        <!--    class="card-table card-table_primitive car-details-dialog">-->
-        <!--    <el-dialog-->
-        <!--      title="История состояний автомобиля"-->
-        <!--      :visible.sync="carConditionsDialogVisible"-->
-        <!--      width="940px"-->
-        <!--      append-to-body>-->
+    <div
+        class="card-table card-table_primitive car-details-dialog">
+            <el-dialog
+              title="История состояний автомобиля"
+              v-model="carConditionsDialogVisible"
+              width="940px"
+              append-to-body>
 
-        <!--      <CarConditionsDialog :cur-car-id="carId"/>-->
-        <!--    </el-dialog>-->
+              <CarConditionsDialog :cur-car-id="carId"/>
+            </el-dialog>
 
-        <!--    <el-dialog-->
-        <!--      title="Отправить автомобиль на Т.О"-->
-        <!--      :visible.sync="techInspectionCreatingDialogVisible"-->
-        <!--      :before-close="$handleCloseDialog"-->
-        <!--      append-to-body >-->
+            <el-dialog
+              title="Отправить автомобиль на Т.О"
+              v-model="techInspectionCreatingDialogVisible"
+              append-to-body >
 
-        <!--      <TechInspectionCreatingDialog-->
-        <!--        :key="carId"-->
-        <!--        :car-id="carId"-->
-        <!--        @submit="closeTechInspectionCreatingDialog" />-->
-        <!--    </el-dialog>-->
-        <!--    <el-dialog-->
-        <!--      title="Добавить перемещение авто на другой парк"-->
-        <!--      :visible.sync="ScheduleTransferRegionParkDialogVisible"-->
-        <!--      append-to-body >-->
-        <!--      <ScheduleTransferRegionParkDialog @close="ScheduleTransferRegionParkDialogVisible = false" :currentRegionParkId="carInfo.regionParkId" :carId="carId"/>-->
-        <!--    </el-dialog>-->
+              <TechInspectionCreatingDialog
+                :key="carId"
+                :car-id="carId"/>
+            </el-dialog>
+            <el-dialog
+              title="Добавить перемещение авто на другой парк"
+              v-model="modulOpen"
+              append-to-body >
+              <ScheduleTransferRegionParkDialog  :currentRegionParkId="carInfo.regionParkId" :carId="carId"/>
+            </el-dialog>
         <table class="table-mini">
             <tbody>
             <tr class="table-mini__row-head">
@@ -97,16 +94,20 @@
         <!--    <TechInspectionHistoryCarOnly :carId="carId" />-->
         <div class="car-details-dialog__buttons">
             <el-button
-                type="danger">
+                type="danger" @click="openAnotherPark">
                 Переместить в другой парк
+
             </el-button>
             <el-button
-                    type="primary">
+                    type="primary"
+                    @click="openCarConditions">
                 История состояний автомобиля
             </el-button>
 
             <el-button
-                    type="warning" >
+                    type="warning"
+                    @click="openTechInspectionCreatingDialog"
+            >
 
 
                 Отправить на Т.О.
@@ -117,9 +118,12 @@
 </template>
 
 <script setup lang="ts">
-import {defineProps} from 'vue';
+import {defineProps, ref} from 'vue';
 import {ICarData} from "@/types";
-
+import ScheduleTransferRegionParkDialog from '@/components/schedule/transferRegionParkDialog'
+// import TechInspectionHistoryCarOnly from '@/components/techInspection/TechInspectionHistoryCarOnly'
+import TechInspectionCreatingDialog from '@/components/techInspection/dialogs/TechInspectionCreatingDialog'
+import CarConditionsDialog from '@/components/dialogs/carPark/carConditionsDialog'
 interface IProps {
     carId: string
     carDetailsDialogVisible: boolean
@@ -128,6 +132,22 @@ interface IProps {
 
 defineProps<IProps>()
 
+
+const modulOpen = ref<boolean>(false)
+const techInspectionCreatingDialogVisible = ref<boolean>(false)
+const carConditionsDialogVisible = ref<boolean>(false)
+
+
+const openCarConditions = () => {
+    carConditionsDialogVisible.value = true
+}
+const openAnotherPark = () => {
+    modulOpen.value = true
+}
+
+const openTechInspectionCreatingDialog =  () => {
+    techInspectionCreatingDialogVisible.value = true
+}
 // import carsConditions from '@/mixin/carsConditions'
 // import CarConditionsDialog from '@/components/dialogs/carPark/carConditionsDialog'
 // import { mapActions, mapGetters, mapState } from 'vuex'

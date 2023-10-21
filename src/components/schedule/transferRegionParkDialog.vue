@@ -7,41 +7,58 @@
     </div>
 </template>
 
-<script>
-import { mapActions, mapState } from 'vuex'
-export default {
-  props: {
-    currentRegionParkId: {
-      type: String
-    },
-    carId: {
-      type: String
-    }
-  },
-  data () {
-    return {
-      regionParkId: null
-    }
-  },
-  computed: {
-    ...mapState('regionPark', ['regionPark'])
-  },
-  methods: {
-    ...mapActions('schedule', {
-      useTransferRegionPark: 'useTransferRegionPark',
-      fetchSchedule: 'fetchSchedule'
-    }),
-    async  handleSumbit () {
-      if (!this.regionParkId) return false
-      await this.useTransferRegionPark({
-        regionParkId: this.regionParkId,
-        carId: this.carId
-      })
-      await this.fetchSchedule({})
-      this.$emit('close')
-    }
-  }
+<script setup lang="ts">
+
+import {defineProps, ref} from 'vue';
+import {ICarData} from "@/types";
+
+
+interface IProps {
+    carId: string
+    currentRegionParkId: string
+
 }
+
+defineProps<IProps>()
+
+const regionParkId = ref(null)
+const handleSumbit = () => {
+//
+}
+// import { mapActions, mapState } from 'vuex'
+// export default {
+//   props: {
+//     currentRegionParkId: {
+//       type: String
+//     },
+//     carId: {
+//       type: String
+//     }
+//   },
+//   data () {
+//     return {
+//       regionParkId: null
+//     }
+//   },
+//   computed: {
+//     ...mapState('regionPark', ['regionPark'])
+//   },
+//   methods: {
+//     ...mapActions('schedule', {
+//       useTransferRegionPark: 'useTransferRegionPark',
+//       fetchSchedule: 'fetchSchedule'
+//     }),
+//     async  handleSumbit () {
+//       if (!this.regionParkId) return false
+//       await this.useTransferRegionPark({
+//         regionParkId: this.regionParkId,
+//         carId: this.carId
+//       })
+//       await this.fetchSchedule({})
+//       this.$emit('close')
+//     }
+//   }
+// }
 </script>
 
 <style lang="scss" scoped>
