@@ -1,0 +1,18 @@
+.close-button {
+  &:hover {
+    color: #fff;
+    background-color: #f78989;
+    border-color: #f78989;
+  }
+}
+
+.success-button {
+  display: block;
+  margin: 0 auto;
+
+  &:hover {
+    color: #fff;
+    background-color: #1cc052;
+    border-color: #1cc052;
+  }
+}

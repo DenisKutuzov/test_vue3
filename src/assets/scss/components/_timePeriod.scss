@@ -1,0 +1,15 @@
+@import "../mixins/mixins";
+
+.time-period{
+  margin-left: 15px;
+  width: 100%;
+  &__container{
+    @include alginCenterRow;
+  }
+
+  &__navigation{
+    @include alginCenterRow;
+    width: 860px;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,58 @@
+@import "../mixins/mixins";
+
+.category-list {
+  margin-left: 40px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item {
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    justify-content: flex-start;
+    @include alginCenterRow;
+    border-bottom: #DFE0EB solid 1px;
+
+    .item {
+      &__circle {
+        min-width: 25px;
+        height: 25px;
+        border-radius: 50%;
+      }
+
+      &__name {
+        width: 130px;
+        margin-left: 10px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: #9FA2B4;
+      }
+
+      &__percent {
+        margin-left: auto;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: right;
+        letter-spacing: 0.2px;
+        justify-self: flex-end;
+        color: #000000;
+      }
+    }
+  }
+
+}
+
+
+
+
+

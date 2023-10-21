@@ -1,0 +1,42 @@
+.cars-load {
+  margin: 15px;
+  display: flex;
+  width: 470px;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #DFE0EB;
+  border-radius: 8px;
+
+  &__container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+  }
+
+  &__title {
+    width: 50%;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #252733;
+  }
+
+  &__chart {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+
+

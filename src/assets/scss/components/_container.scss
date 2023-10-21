@@ -1,0 +1,21 @@
+.el-container {
+
+  &_login-page-container{
+    height: 100vh;
+    justify-content: center;
+  }
+
+    &_flex-wrap {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    &_content-wrap-50 {
+      padding: 10px;
+      width: 50%;
+    }
+
+  &_content-wrap-100 {
+    padding: 10px;
+    width: 100%;
+  }
+}

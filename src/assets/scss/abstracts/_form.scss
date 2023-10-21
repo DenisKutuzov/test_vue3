@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-wrap: nowrap;
+
+  &__item {
+    width: 49%;
+
+    &:nth-child(2n+1) {
+      margin-right: 2% !important;
+    }
+
+    .el-input-number,
+    .el-date-editor.el-input,
+    .el-select {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  
+  &_col1 .form__item {
+    width: 100%;
+    margin-right: 0;
+  }
+}

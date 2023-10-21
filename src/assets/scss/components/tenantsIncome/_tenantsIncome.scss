@@ -1,0 +1,8 @@
+@import "../../mixins/mixins";
+
+.tenants-income{
+  @include pageTemplate;
+  &__container {
+    width: 90%;
+  }
+}

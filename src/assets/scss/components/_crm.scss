@@ -1,0 +1,20 @@
+.crm {
+   height: 100vh;
+   &__grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
+      grid-gap: 10px;
+   }
+   &__edit_btn{
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 20px;
+      opacity: 0.5;
+      transition: all 0.3s;
+      &:hover{
+         transition: all 0.3s;
+         opacity: 1;
+      }
+   }
+}

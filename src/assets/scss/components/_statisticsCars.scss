@@ -1,0 +1,7 @@
+@import "../mixins/mixins";
+.statistics-cars{
+  @include pageTemplate;
+  &__container {
+    width: 90%;
+  }
+}

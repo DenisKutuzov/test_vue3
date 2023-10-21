@@ -1,0 +1,119 @@
+body {
+  height: 100vh;
+}
+
+h1 {
+  font-family: Raleway, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+}
+
+h2 {
+  font-family: Mulish, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.margin-zero {
+  margin: 0;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+.w100 {
+  width: 100%;
+}
+.margin-10 {
+  margin: 10px;
+}
+
+.margin-top-5 {
+  margin-top: 5px;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+.margin-10-right {
+  margin-right: 10px;
+}
+
+.margin-10-left {
+  margin-left: 10px;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+.ai-center {
+  align-items: center;
+}
+.no-event {
+  pointer-events: none;
+}
+
+.el-card__header {
+  font-weight: 700;
+}
+
+.capitalize input {
+  text-transform: capitalize;
+}
+
+.uppercase input {
+  text-transform: uppercase;
+}
+.max-height_table {
+  max-height: 225px;
+  overflow: auto;
+}
+.break-word{
+  word-break: break-word;
+}
+.native-table-hover{
+  transition: all 0.3s
+}
+.native-table-hover:hover{
+  transition: all 0.3s;
+  background: rgba(131, 105, 105, 0.245);
+
+}
+.column{
+  flex-direction: column;
+}
+.gap10{
+  gap: 5px;
+}
+.text-center{
+  text-align: center;
+}
+.text-end{
+  text-align: end;
+}
+.d-flex{
+  display: flex;
+}

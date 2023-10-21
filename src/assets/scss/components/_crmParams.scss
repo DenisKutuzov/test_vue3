@@ -1,0 +1,7 @@
+@import "../mixins/mixins";
+.crm-params {
+  @include pageTemplate;
+  &__container {
+    width: 90%;
+  }
+}

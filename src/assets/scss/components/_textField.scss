@@ -1,0 +1,31 @@
+.text-field {
+  font-family: Futura;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: rgba(0, 0, 0, 0.56);
+  margin-right: 10px;
+
+  &__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top:5px;
+    border: 2px solid #979797;
+    border-radius: 4px;
+
+    p {
+      margin-left: 5px;
+      font-family: Futura;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}

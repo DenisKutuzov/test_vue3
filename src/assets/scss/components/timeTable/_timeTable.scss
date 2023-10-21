@@ -1,0 +1,35 @@
+@import "../../mixins/mixins";
+
+.time-table{
+  @include pageTemplate;
+
+  &__container {
+    width: 90%;
+  }
+}
+
+.car-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 80px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    -webkit-box-shadow: 1px 2px 4px 3px rgba(235,235,235,1);
+    -moz-box-shadow: 1px 2px 4px 3px rgba(235,235,235,1);
+    box-shadow: 1px 2px 4px 3px rgba(235,235,235,1);
+    border-radius: 8px;
+  }
+}
+
+.tab-bar{
+  width: 20%;
+  font-family: "Raleway";
+}

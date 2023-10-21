@@ -1,0 +1,46 @@
+.rik-status-radio-button {
+  .el-radio-button__inner {
+    @include rik-status-button-color($--dark-blue, $--white);
+  }
+
+  .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+    @include rik-status-button-color(#F1F0EDFF, rgb(96, 98, 102));
+    border-color: #DCDFE6;
+  }
+}
+
+.rik-status-radio-button--primary {
+  .el-radio-button__inner {
+    @include rik-status-button-color($--el-primary, $--white);
+  }
+}
+
+.rik-status-radio-button--success {
+  .el-radio-button__inner {
+    @include rik-status-button-color($--el-success, $--white);
+  }
+}
+
+.rik-status-radio-button--info {
+  .el-radio-button__inner {
+    @include rik-status-button-color($--el-info, $--white);
+  }
+}
+
+.rik-status-radio-button--warning {
+  .el-radio-button__inner {
+    @include rik-status-button-color($--el-warning, $--white);
+  }
+}
+
+.rik-status-radio-button--danger {
+  .el-radio-button__inner {
+    @include rik-status-button-color($--el-danger, $--white);
+  }
+}
+
+.rik-status-radio-button--dark-blue {
+  .el-radio-button__inner {
+    @include rik-status-button-color($--dark-blue, $--white);
+  }
+}

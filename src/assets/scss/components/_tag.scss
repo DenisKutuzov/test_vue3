@@ -1,0 +1,8 @@
+.tag {
+  &--dark-blue {
+    @include tag-color($--dark-blue, $--white, $--dark-blue)
+  }
+  &--pale-red {
+    @include tag-color($--pale-red, $--white, $--pale-red)
+  }
+}

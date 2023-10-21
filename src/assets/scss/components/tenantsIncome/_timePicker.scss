@@ -1,0 +1,52 @@
+.time-picker {
+  margin-top: 15px;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+
+  &__filter{
+    margin: 10px;
+  }
+
+  &__navigation {
+    display: flex;
+    width: 890px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+}
+
+.day-time-button{
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  margin: 10px;
+  background-color: #F6F6F6;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: right;
+  color: #8B8B8B;
+
+  img {
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+  }
+
+  &:hover {
+    background: rgba(24, 160, 251, 0.1);
+    color: #18A0FB;
+  }
+}

@@ -1,0 +1,105 @@
+.el-card {
+  height: 100%;
+  border: 1px solid rgba(210,208,204,0.5);
+  border-radius: 0;
+  box-shadow: none !important;
+
+  &_flex-wrap {
+    &-66 {
+      padding: 10px;
+      width: 66%;
+      min-width: 800px;
+    }
+    &-33 {
+      padding: 10px;
+      width: 33%;
+      min-width: 400px;
+    }
+  }
+
+  &_shedule-little {
+    max-height: 120px;
+    min-height: 120px;
+    min-width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 5px 0;
+
+    background: none
+  }
+
+  &_shedule {
+    max-height: 110px;
+    min-height: 110px;
+    min-width: 150px;
+    max-width: 150px;
+    border: none;
+    margin: 0 5px;
+    background: none;
+
+    .el-card__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &_shedule-date {
+    max-height: 40px;
+    min-height: 40px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    background: none
+  }
+  &_transparent{
+    background: none;
+  }
+
+  &__body {
+    height: 100%;
+
+    &-row {
+      display: flex;
+      flex-direction: row;
+    }
+    &-padding-10 {
+      padding: 10px;
+    }
+  }
+
+}
+
+.transparent-card {
+  display: flex;
+  max-height: 40px;
+  min-height: 40px;
+  min-width: 200px;
+  margin: 5px;
+}
+
+.transparent-card_little {
+  display: flex;
+  max-height: 40px;
+  min-height: 40px;
+  min-width: 50px;
+  margin: 5px;
+}
+
+.custom-day-time-card{
+  background: #FFFFFF;
+  //box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  //border: 1px solid #EBEEF5;
+  //border-radius: 8px;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+}

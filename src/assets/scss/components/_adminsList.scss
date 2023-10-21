@@ -1,0 +1,7 @@
+@import "../mixins/mixins";
+.admins-list {
+  @include pageTemplate;
+  &__container {
+    width: 90%;
+  }
+}

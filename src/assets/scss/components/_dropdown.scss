@@ -1,0 +1,14 @@
+.dropdown {
+  &--dark-blue {
+    &.el-button,
+    .el-button {
+      @include tag-color($--dark-blue, $--white, $--white);
+    }
+  }
+  &--pale-red {
+    &.el-button,
+    .el-button {
+      @include tag-color($--pale-red, $--white, $--pale-red)
+    }
+  }
+}

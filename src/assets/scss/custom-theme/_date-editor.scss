@@ -1,0 +1,35 @@
+.el-date-editor {
+  font-size: 16px;
+  background-color: #f1f0ed;
+  border-radius: 16px;
+  transition: none;
+  width: 100% !important;
+  max-width: 250px;
+  &:hover {
+    .el-inner__inner {
+      border-color: #e8e7e4;
+      background-color: #e8e7e4;
+    }
+  }
+
+  .el-input__inner {
+    border-radius: inherit;
+    background-color: inherit;
+    transition: none;
+    border: 2px solid #f1f0ed;
+  }
+
+  .el-range-input,
+  .el-range-separator {
+    color: #000 !important;
+  }
+
+  .el-range-input {
+    background-color: inherit;
+  }
+
+  .el-range-separator {
+    display: flex;
+    justify-content: center;
+  }
+}

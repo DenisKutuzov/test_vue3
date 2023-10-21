@@ -1,0 +1,27 @@
+.car-features {
+  font-size: 16px;
+
+  &__title {
+    font-size: 14px;
+    line-height: 1.1;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(210, 208, 204, 0.5);
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    overflow: auto;
+  }
+
+  &__item {
+    button {
+      font-size: inherit;
+    }
+
+    + .car-features__item {
+      margin-left: 10px;
+    }
+  }
+}

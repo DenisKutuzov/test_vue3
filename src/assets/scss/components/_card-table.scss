@@ -1,0 +1,30 @@
+.card-table {
+  height: 100%;
+  padding: 20px;
+  border: 1px solid rgba(210, 208, 204, 0.5);
+
+  &_primitive {
+    padding: 0;
+    border: none;
+  }
+
+  &__row_border td {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(210, 208, 204, 0.5);
+
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -20px;
+
+    button {
+      pointer-events: none;
+
+      + button {
+        margin-left: 5px !important;
+      }
+    }
+  }
+}

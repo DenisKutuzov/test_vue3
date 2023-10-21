@@ -1,0 +1,156 @@
+.el-table_no-header {
+  .el-table__header-wrapper {
+    display: none;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+
+  td.el-table__cell>.cell,
+  th.el-table__cell>.cell {
+    padding: 0 10px !important;
+  }
+
+  &__row_no-wrap {
+    display: flex;
+  }
+
+  thead {
+    font-weight: bold;
+
+    td {
+      height: 50px;
+      border-bottom: 0.8px solid #000;
+    }
+  }
+
+  tbody {
+    td {
+      border-bottom: 0.5px solid rgb(235, 238, 245);
+    }
+  }
+
+  td {
+    padding: 10px;
+    min-width: 82px;
+
+  }
+
+  &_low {
+    max-height: 400px;
+  }
+}
+
+.table:not(.table_last-auto-width) {
+  td {
+    &:last-child {
+      width: 300px;
+    }
+  }
+}
+
+.table-mini {
+  width: 100%;
+  border-collapse: collapse;
+
+  &_primitive {
+    padding: 0;
+    border: none;
+
+    .table-mini {
+      tr:not(.table-mini__row_head) {
+        &:nth-child(2n) {
+          background-color: #F1F0EDFF;
+        }
+
+        &:hover {
+          background-color: #dcdcdc;
+        }
+      }
+
+      td {
+        padding: 4px 0;
+      }
+    }
+
+    .table-mini__row_head {
+      td {
+        padding-top: 15px;
+      }
+    }
+  }
+
+  &_no-hover {
+    .table-mini__table tr:not(.table-mini__row_head):hover {
+      background-color: transparent;
+    }
+  }
+
+  &__row-head {
+    font-weight: 700;
+
+    td {
+      white-space: nowrap;
+      padding-top: 20px;
+      border-bottom: 1px solid rgba(210, 208, 204, 0.5);
+    }
+  }
+
+  thead {
+    border-bottom: 1px solid rgba(210, 208, 204, 0.5);
+  }
+
+  tbody {
+    tr:first-child td {
+      padding-top: 12px;
+    }
+  }
+
+  td {
+    padding: 6px 0;
+  }
+
+  td:nth-child(2) {
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  tr:not(.table-mini__row-head) {
+    &:nth-child(2n) {
+      background-color: #F1F0EDFF;
+    }
+
+    &:hover {
+      background-color: #dcdcdc;
+    }
+  }
+
+  td {
+    padding: 4px 0;
+  }
+}
+
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    padding: 6px 0;
+  }
+
+  thead {
+    td {
+      //border-top: 1px solid rgba(210, 208, 204, 0.5);
+      border-bottom: 1px solid rgba(210, 208, 204, 0.5);
+    }
+  }
+
+  tbody {
+    tr:first-child td {
+      padding-top: 12px;
+    }
+  }
+}

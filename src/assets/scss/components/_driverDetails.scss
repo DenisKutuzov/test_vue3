@@ -1,0 +1,66 @@
+.driver-details__container{
+  width: 90%;
+
+  .driver-details__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    p{
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.3px;
+
+      /* Colors / Light / Description Color */
+
+      color: #2C2C2C;
+    }
+  }
+
+  .driver-details__main{
+    display: flex;
+    flex-direction: column;
+
+    p{
+      font-family: "Raleway";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+
+      letter-spacing: 0.3px;
+    }
+
+    .main__row{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .main__row:nth-child(2) , .main__row:nth-child(3) , .main__row:nth-child(4) {
+      margin-top: 10px;
+    }
+
+    .main__row:nth-child(5) {
+      justify-content: flex-start;
+    }
+
+    .main__danger-button{
+      border-radius:8px;
+      width: 120px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: .2s;
+      &:hover {
+        background-color: rgba(247, 114, 114, 0.71);
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../mixins/mixins";
+.tenants{
+  @include pageTemplate;
+  &__container {
+    width : 90%;
+  }
+}
+
+.tenants-candidates {
+  @include pageTemplate;
+  &__container {
+    width : 90%;
+  }
+}
+
+.add-tenant{
+  button {
+    margin-right: 5px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}

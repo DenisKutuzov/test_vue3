@@ -1,0 +1,14 @@
+
+.sorting{
+  display: flex;
+  justify-content: flex-start;
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    .custom-el-input{
+      width: 250px;
+      margin-right: 10px;
+    }
+  }
+}

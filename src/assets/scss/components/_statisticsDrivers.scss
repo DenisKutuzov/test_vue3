@@ -1,0 +1,7 @@
+@import "../mixins/mixins";
+.statistics-drivers{
+  @include pageTemplate;
+  &__container {
+    width: 90%;
+  }
+}

@@ -1,30 +1,47 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <component :is="layout">
+        <router-view/>
+    </component>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+<script lang="ts">
+import { defineComponent, computed } from 'vue'
+import { useRoute } from 'vue-router'
+import emptyLayout from '@/layouts/emptyLayout.vue'
+import mainLayout from '@/layouts/mainLayout.vue'
+
+export default defineComponent({
+    components: {
+        emptyLayout,
+        mainLayout
+    },
+    setup() {
+        const route = useRoute()
+        const layout = computed(() => route.meta.layout)
+
+        return {
+            layout
+        }
+    }
+})
+</script>
+
+<style lang="scss">
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
-nav {
-  padding: 30px;
+.app {
+  height: max-content;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+* {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
+<script setup lang="ts">
+</script>

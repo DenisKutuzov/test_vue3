@@ -1,0 +1,13 @@
+.no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  color: rgb(144, 147, 153);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #ebeef5;
+
+  &_no-border-top {
+    border-top: none;
+  }
+}

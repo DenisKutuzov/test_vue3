@@ -1,0 +1,24 @@
+@mixin tag-color($background-color,$color,$border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+
+  &:hover {
+    color: $color;
+    background-color: lighten($background-color, 10%);
+    border-color: lighten($border-color, 10%);
+  }
+
+  &:focus {
+    color: $color;
+    background-color: lighten($background-color, 10%);
+    border-color: lighten($border-color, 10%);
+  }
+}
+
+@mixin rik-status-button-color($colorBtn,$fontColor) {
+  color: $fontColor;
+  background-color: $colorBtn;
+  border-color: $colorBtn;
+  box-shadow: -1px 0 0 0 $colorBtn;
+}

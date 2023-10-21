@@ -1,0 +1,25 @@
+@import "vars";
+@import "global";
+@import "abstracts/mixins";
+@import "abstracts/scroll-y";
+@import "abstracts/highest-index";
+@import "abstracts/text-nowrap";
+@import "abstracts/form";
+@import "components/components";
+
+
+.rik-night {
+  span {
+    border-bottom: 1px solid $--dark-blue;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 6px $--dark-blue);
+  }
+}
+
+.rik-morning {
+  span {
+    border-top: 1px solid $--dark-yellow;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 6px $--dark-yellow);
+  }
+}

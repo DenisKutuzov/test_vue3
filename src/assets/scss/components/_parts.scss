@@ -1,0 +1,11 @@
+.parts {
+  height: 100vh;
+  &__table-el:hover{
+    transition: 0.3s;
+    td{
+      transition: 0.3s;
+      background-color:rgba(128, 128, 128, 0.324);
+    }
+    cursor:pointer;
+  }
+}
